@@ -19,11 +19,11 @@ export const ProductList = styled(FlatList)`
 `;
 
 export const Product = styled.View`
-  background: #fff;
+  background: ${props => props.theme.colors.backgroundCard};
   padding: 15px 10px;
   border-radius: 5px;
   margin: 5px;
-  flex: 1;
+  /* flex: 1; */
   flex-direction: row;
 `;
 
@@ -39,6 +39,7 @@ export const ProductTitleContainer = styled.View`
 
 export const ProductTitle = styled.Text`
   font-size: 16px;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const ProductPriceContainer = styled.View`
@@ -61,7 +62,7 @@ export const ProductPrice = styled.Text`
   margin-top: 5px;
 
   font-size: 16px;
-  color: #e83f5b;
+  color: ${props => props.theme.colors.primary};
 `;
 
 export const ProductQuantity = styled.Text`
@@ -70,7 +71,7 @@ export const ProductQuantity = styled.Text`
   margin-right: 10px;
 
   font-size: 16px;
-  color: #e83f5b;
+  color: ${props => props.theme.colors.primary};
 `;
 
 export const ActionContainer = styled.View`
@@ -82,7 +83,7 @@ export const ActionContainer = styled.View`
 `;
 
 export const ActionButton = styled.TouchableOpacity`
-  background: rgba(232, 63, 91, 0.1);
+  background: ${props => props.theme.colors.primaryBright};
   border-radius: 5px;
   padding: 12px;
   margin-bottom: 5px;
@@ -93,7 +94,7 @@ export const TotalProductsContainer = styled.View`
   bottom: 0px;
 
   flex-direction: row;
-  background: #e83f5b;
+  background: ${props => props.theme.colors.primary};
 
   padding: 20px 40px;
   justify-content: space-between;
